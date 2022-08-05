@@ -1,5 +1,25 @@
 import Vapor
 
+final class MonitorConnection: Hashable {
+    
+    let id: UUID
+    let socket: WebSocket
+    
+    init(id: UUID = .init(), socket: WebSocket) {
+        self.id = id
+        self.socket = socket
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: MonitorConnection, rhs: MonitorConnection) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+}
+
 final class Connection: Hashable {
     
     let id: UUID
