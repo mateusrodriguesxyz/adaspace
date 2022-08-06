@@ -2,9 +2,8 @@ import Vapor
 
 func routes(_ app: Application) throws {
     
-    app.webSocket("echo") { req, ws in
-        // Connected WebSocket.
-        print(ws)
+    app.webSocket("terminal") { req, socket in
+        RemoteTerminal.default.connect(socket)
     }
     
     app.routes.get { req -> String in
@@ -19,6 +18,5 @@ func routes(_ app: Application) throws {
     try app.register(collection: UserController())
     try app.register(collection: PostController()) 
     try app.register(collection: LikeController())
-    try app.register(collection: RemoteConsoleController())
     
 }

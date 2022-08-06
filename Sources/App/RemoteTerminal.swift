@@ -33,7 +33,16 @@ public class RemoteTerminal: Console {
     
     var connections = Set<Connection>()
     
+    public var size: (width: Int, height: Int) = (0, 0)
+    
+    public var userInfo: [AnyHashable : Any] = [:]
+    
     public init() { }
+    
+    public func connect(_ socket: WebSocket) {
+        let connection = Connection(socket: socket)
+        connections.insert(connection)
+    }
     
     public func input(isSecure: Bool) -> String {
         fatalError("input(isSecure:) not implemented")
@@ -49,13 +58,6 @@ public class RemoteTerminal: Console {
     
     public func clear(_ type: ConsoleClear) { }
     
-    public var size: (width: Int, height: Int) = (0, 0)
-    
-    public var userInfo: [AnyHashable : Any] = [:]
-    
-    public func report(error: String, newLine: Bool) {
-        
-    }
-    
+    public func report(error: String, newLine: Bool) { }
     
 }
