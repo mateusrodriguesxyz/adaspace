@@ -3,7 +3,7 @@ import Fluent
 import FluentSQLiteDriver
 import Foundation
 
-public func configure(_ app: Application, monitor: Monitor) throws {
+public func configure(_ app: Application) throws {
     
     app.databases.use(.sqlite(.file("db.sqlite")), as: .sqlite)
     
@@ -25,6 +25,6 @@ public func configure(_ app: Application, monitor: Monitor) throws {
     
     try app.autoMigrate().wait()
     
-    try routes(app, monitor: monitor)
+    try routes(app)
     
 }
