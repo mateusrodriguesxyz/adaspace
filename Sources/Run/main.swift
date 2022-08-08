@@ -9,7 +9,7 @@ try LoggingSystem.bootstrap(from: &env) { level in
         MultiplexLogHandler([
             ConsoleLogger(label: label, console: console, level: level),
             ConsoleLogger(label: label, console: RemoteTerminal.default, level: level),
-            FileLogger(label: label, filePath: DirectoryConfiguration.detect().workingDirectory + "logs.txt", level: level)
+            FileLogger(label: label, filePath: DirectoryConfiguration.detect().publicDirectory + "logs.txt", level: level)
         ])
     }
 }
