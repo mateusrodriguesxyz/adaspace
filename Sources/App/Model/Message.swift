@@ -1,6 +1,6 @@
 import Foundation
 
 struct Message: Codable {
-    let user: User.Public
+    let userID: User.IDValue
     let text: String
 }

@@ -28,7 +28,6 @@ public class RemoteTerminal: Console {
     }
     
     public func output(_ text: ConsoleText, newLine: Bool) {
-        Swift.print(#function, self)
         let data = "\(text)".data(using: .utf8)!
         sockets.forEach {
             $0.send([UInt8](data))

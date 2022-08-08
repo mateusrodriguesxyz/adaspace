@@ -3,10 +3,19 @@ import Fluent
 import FluentSQLiteDriver
 import Foundation
 
+final class ReportMiddleware: Middleware {
+
+    public func respond(to request: Request, chainingTo next: Responder) -> EventLoopFuture<Response> {
+        print(#function, request.url.path)
+        return next.respond(to: request)
+    }
+}
+
 public func configure(_ app: Application) throws {
     
     app.databases.use(.sqlite(.file("db.sqlite")), as: .sqlite)
     
+    app.middleware.use(ReportMiddleware())
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
     app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory + "documentation"))
     
