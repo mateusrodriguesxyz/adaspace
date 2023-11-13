@@ -1,0 +1,84 @@
+[ NOTICE ] Server starting on http://127.0.0.1:8080
+[ NOTICE ] Server starting on http://127.0.0.1:8080
+[ INFO ] GET /
+[ INFO ] GET /
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /favicon-16x16.png
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /openapi.yml
+[ NOTICE ] Server starting on http://127.0.0.1:8080
+[ INFO ] GET /documentation
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /openapi.yml
+[ INFO ] [Migrator] Starting prepare [migration: App.CreateUser]
+[ INFO ] [Migrator] Finished prepare [migration: App.CreateUser]
+[ INFO ] [Migrator] Starting prepare [migration: App.CreatePost]
+[ INFO ] [Migrator] Finished prepare [migration: App.CreatePost]
+[ INFO ] [Migrator] Starting prepare [migration: App.UpdateLike]
+[ INFO ] [Migrator] Finished prepare [migration: App.UpdateLike]
+[ INFO ] [Migrator] Starting prepare [migration: App.CreateToken]
+[ WARNING ] Autoincrement not supported, skipping
+[ INFO ] [Migrator] Finished prepare [migration: App.CreateToken]
+[ NOTICE ] Server starting on http://127.0.0.1:8080
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /openapi.yml
+[ INFO ] GET /documentation
+[ INFO ] GET /swagger-initializer.js
+[ INFO ] GET /index.css
+[ INFO ] GET /swagger-ui.css
+[ INFO ] GET /swagger-ui-standalone-preset.js
+[ INFO ] GET /swagger-ui-bundle.js
+[ INFO ] GET /openapi.yml

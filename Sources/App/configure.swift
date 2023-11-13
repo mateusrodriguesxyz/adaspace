@@ -13,6 +13,8 @@ final class ReportMiddleware: Middleware {
 
 public func configure(_ app: Application) throws {
     
+//    app.http.server.configuration.hostname = "0.0.0.0"
+    
     app.databases.use(.sqlite(.file("db.sqlite")), as: .sqlite)
     
     app.middleware.use(ReportMiddleware())
@@ -31,6 +33,12 @@ public func configure(_ app: Application) throws {
     encoder.dateEncodingStrategy = .iso8601
     
     ContentConfiguration.global.use(encoder: encoder, for: .json)
+    
+    let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    decoder.dateDecodingStrategy = .iso8601
+    
+    ContentConfiguration.global.use(decoder: decoder, for: .json)
     
     try app.autoMigrate().wait()
     

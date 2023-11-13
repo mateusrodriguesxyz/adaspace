@@ -6,7 +6,7 @@ struct CreatePost: AsyncMigration {
         try await database
             .schema(Post.schema)
             .id()
-            .field("content", .string)
+            .field("text", .string)
             .field("media", .string)
             .field("like_count", .int)
             .field("created_at", .datetime)
