@@ -26,8 +26,8 @@ password: safeAndStrongPwd
 username: ivy.martinez
 password: mySecurePassword
 
-username: jack.turner",
-password: strongPwd4567"
+username: jack.turner
+password: strongPwd4567
 
 ```
 
