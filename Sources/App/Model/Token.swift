@@ -6,11 +6,11 @@ enum SessionSource: Int, Content {
     case login
 }
 
-final class Token: Model {
+final class Token: Model, @unchecked Sendable {
     
     static let schema = "tokens"
     
-    @ID(key: "id")
+    @ID(key: .id)
     var id: UUID?
     
     @Parent(key: "user_id")

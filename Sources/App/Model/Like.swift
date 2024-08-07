@@ -1,7 +1,7 @@
 import Vapor
 import Fluent
 
-final class Like: Model {
+final class Like: Model, @unchecked Sendable {
     
     static let schema = "likes"
     

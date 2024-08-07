@@ -1,7 +1,7 @@
 import Vapor
 import Fluent
 
-final class Post: Model {
+final class Post: Model, @unchecked Sendable {
     
     static let schema = "posts"
     
@@ -91,7 +91,7 @@ extension ByteBuffer {
 
 extension Post {
     
-    final class Mock: Model {
+    final class Mock: Model, @unchecked Sendable {
         
         struct Input: Content {
             let text: String

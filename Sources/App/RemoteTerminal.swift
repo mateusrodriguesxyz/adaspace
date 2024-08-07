@@ -7,7 +7,7 @@
 
 import Vapor
 
-public class RemoteTerminal: Console {
+public final class RemoteTerminal: Console, @unchecked Sendable {
         
     public static var `default` = RemoteTerminal()
     
@@ -15,8 +15,8 @@ public class RemoteTerminal: Console {
     
     public var size: (width: Int, height: Int) = (0, 0)
     
-    public var userInfo: [AnyHashable : Any] = [:]
-    
+    public var userInfo: [ConsoleKitTerminal.AnySendableHashable : any Sendable] = [:]
+
     public init() { }
     
     public func connect(_ socket: WebSocket) {
