@@ -26,6 +26,7 @@ public func configure(_ app: Application) throws {
     app.migrations.add(CreateUser())
     app.migrations.add(CreatePost())
     app.migrations.add(UpdateLike())
+    app.migrations.add(CreateReport())
     app.migrations.add(CreateToken())
     
     let encoder = JSONEncoder()

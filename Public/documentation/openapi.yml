@@ -4,8 +4,6 @@ info:
   version: '1.0'
 
 servers:
-  - description: Main Server
-    url: http://adaspace.local
   - description: Local Server
     url: http://localhost:8080
 
@@ -325,7 +323,7 @@ paths:
             type: string
             format: uuid
           required: true
-          description: ID of the post to request liking users of
+          description: ID of the post to request liking users
       responses:
         '200':
           description: A user json object
@@ -348,7 +346,7 @@ paths:
             type: string
             format: uuid
           required: true
-          description: ID of the user to request liked posts for.
+          description: ID of the user to request liked posts
       responses:
         '200':
           description: A list of posts
@@ -358,6 +356,42 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Post'
+                  
+  /reports/{post_id}:
+    get:
+      tags:
+          - Reports
+      summary: Get a post reports
+      parameters:
+          - in: path
+            name: post_id
+            schema:
+              type: string
+              format: uuid
+            required: true
+            description: ID of the post to request reports
+      responses:
+        '200':
+          description: A list of reports
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+    post:
+      tags:
+         - Reports
+      summary: Report the specified post
+      security:
+          - BearerAuth: []
+      requestBody:
+        required: true
+        content:
+          text/plain:
+            schema:
+              type: string
+              description: The reason of the report
                   
   /likes:
     post:
@@ -446,6 +480,9 @@ components:
           description: The post user ID.
         user:
            $ref: '#/components/schemas/User'
+        like_count:
+          type: integer
+          format: int32
         created_at:
           type: string
           format: date-time

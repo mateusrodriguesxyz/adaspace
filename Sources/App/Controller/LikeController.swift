@@ -21,7 +21,7 @@ struct LikeController: RouteCollection {
             throw Abort(.notFound)
         }
         if let _ = try await Like.query(on: req.db).filter(\.$post.$id == postID).filter(\.$user.$id == userID).first() {
-            return Response(status: .noContent)
+            return Response(status: .conflict)
         } else {
             
             let like = try Like(userID: user.requireID(), postID: post.requireID())
