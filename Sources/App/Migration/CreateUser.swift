@@ -11,7 +11,7 @@ struct CreateUser: AsyncMigration {
             .field("username", .string)
             .field("password", .string)
             .unique(on: "username")
-            .constraint(.sql(raw: "CHECK (LENGTH(name) >= 5)"))
+            .constraint(.sql(raw: "CHECK (LENGTH(name) >= 1)"))
             .constraint(.sql(raw: "CHECK (LENGTH(username) >= 5)"))
             .constraint(.sql(raw: "CHECK (LENGTH(password) >= 5)"))
             .create()
